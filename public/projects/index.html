@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | JHC IT Club</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <a href="../index.html">
+            <span>JHC IT Club</span>
+          </a>
+        </div>
+
+        <nav class="navbar">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about/">About Us</a></li>
+            <li><a href="./index.html" class="active">Projects</a></li>
+            <li><a href="../contact/">Contact Us</a></li>
+          </ul>
+        </nav>
+
+        <div class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- Projects Hero -->
+    <section class="page-hero">
+      <div class="container scrani">
+        <h1>Our Projects</h1>
+        <p>Explore the innovative solutions created by our club members</p>
+      </div>
+    </section>
+
+    <section class="projects-filter">
+      <div class="container scrani">
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">
+            <i class="fas fa-layer-group"></i> All Projects
+          </button>
+          <button class="filter-btn" data-filter="web">
+            <i class="fas fa-code"></i> Web Dev
+          </button>
+          <button class="filter-btn" data-filter="app">
+            <i class="fas fa-mobile-alt"></i> Mobile Apps
+          </button>
+          <button class="filter-btn" data-filter="ai">
+            <i class="fas fa-brain"></i> AI/ML
+          </button>
+          <button class="filter-btn" data-filter="iot">
+            <i class="fas fa-microchip"></i> IoT
+          </button>
+          <button class="filter-btn" data-filter="server">
+            <i class="fas fa-database"></i> Server
+          </button>
+        </div>
+
+        <!-- Mobile filter dropdown -->
+        <div class="mobile-filter">
+          <select id="mobile-filter-select" class="mobile-filter-select">
+            <option value="all" selected>All Projects</option>
+            <option value="web">Web Development</option>
+            <option value="app">Mobile Apps</option>
+            <option value="ai">AI/ML</option>
+            <option value="iot">IoT</option>
+            <option value="server">Server</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-page">
+      <div class="container scrani">
+        <div class="projects-container">
+          <div class="project-item" data-category="app">
+            <div class="project-img">
+              <img
+                src="../assets/images/jhcdigital.jpg"
+                alt="JHC Digital"
+              />
+            </div>
+            <div class="project-info">
+              <h3>JHC Digital</h3>
+              <p>
+                JHC Digital is our main app for digitalizing school sports and
+                events. Watch live, view recordings, and get instant updates —
+                all in one place.
+              </p>
+
+              <div class="project-tech">
+                <span>Flutter</span>
+                <span>Dart</span>
+                <span>Firebase</span>
+              </div>
+              <div class="project-view-link">
+                <a href="../jhcdigital/"
+                  ><i class="fas fa-external-link-alt"></i> View Project</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="project-item" data-category="server">
+            <div class="project-img">
+              <img
+                src="https://www.truenas.com/docs/scale/23.10/images/SCALE/22.12/DashboardMainScreenSCALE.png"
+                alt="Club Server Project"
+              />
+            </div>
+            <div class="project-info">
+              <h3>Storage Server for Club</h3>
+              <p>
+                We built a dedicated storage server for our club using TrueNAS
+                to securely store, manage, and share files across our internal
+                team.
+              </p>
+
+              <div class="project-tech">
+                <span>TrueNAS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-item" data-category="iot">
+            <div class="project-img">
+              <img
+                src="https://hackster.imgix.net/uploads/attachments/1204532/line_follower_robot_using_arduino_uno_and_ir_sensor1_3r2sU2hay2.jpg"
+                alt="Line Follower Robot"
+              />
+            </div>
+            <div class="project-info">
+              <h3>Line Follower Robot</h3>
+              <p>
+                An autonomous robot that follows a path using infrared sensors.
+                Ideal for automation projects and robotics learning.
+              </p>
+
+              <div class="project-tech">
+                <span>Arduino</span>
+                <span>IR Sensors</span>
+              </div>
+
+
+            </div>
+          </div>
+
+          <div class="project-item" data-category="web">
+            <div class="project-img">
+              <img
+                src="https://t3.ftcdn.net/jpg/04/34/45/86/360_F_434458653_dMDMTN1VpeBxEHuOtlS0esEztiSVVQ9y.jpg"
+                alt="Club Website"
+              />
+            </div>
+
+            <div class="project-info">
+              <h3>Club Website</h3>
+              <p>
+                Responsive website for a community club featuring event
+                calendars, member profiles, and news updates.
+              </p>
+
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+
+              <div class="project-view-link">
+                <a href="../index.html">
+                  <i class="fas fa-external-link-alt"></i> View Project
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-item" data-category="ai">
+            <div class="project-img">
+              <img
+                src="https://botup.com/images/blog/chatbot-vs-virtual-assistant.png?v=1685597433119865848"
+                alt="Chatbot"
+              />
+            </div>
+            <div class="project-info">
+              <h3>SmartLearn Chatbot</h3>
+              <p>
+                An intelligent chatbot that helps students navigate their
+                journey by providing personalized learning support, answering
+                questions, and recommending study materials.
+              </p>
+
+              <div class="project-tech">
+                <span>Python</span>
+                <span>NLTK</span>
+                <span>Dialogflow</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h3>JHC IT Club</h3>
+            <p>
+              The IT Club of Jaffna Hindu College is dedicated to digitalizing
+              the school and promoting technological advancement among students.
+            </p>
+            <div class="social-links-foot">
+              <a href="https://github.com/jhcitclub78"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="https://www.youtube.com/@JHCITClub"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about/">About Us</a></li>
+              <li><a href="./index.html">Projects</a></li>
+              <li><a href="../contact/">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Contact Info</h3>
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Mahinthothaja Lab, Jaffna
+                Hindu College
+              </li>
+              <li onclick="location.href='mailto:jhcitclub28@gmail.com'" style="cursor: pointer;">
+  <i class="fas fa-envelope"></i> jhcitclub28@gmail.com
+</li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 <strong>JHC IT Club.</strong> All Rights Reserved. |
+            Developed by
+            <a
+              href="https://abineethan.is-a.dev"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+              ><strong>Abineethan</strong></a
+            >.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

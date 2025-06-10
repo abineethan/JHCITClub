@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | JHC IT Club</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <a href="../index.html">
+            <span>JHC IT Club</span>
+          </a>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about/">About Us</a></li>
+            <li><a href="../projects/">Projects</a></li>
+            <li><a href="./index.html" class="active">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="page-hero scrani">
+      <div class="container">
+        <h1>Connect Us</h1>
+        <p>Let’s talk!</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="container scrani">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h2>Contact <span class="gradient-text">Information</span></h2>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="info-item-content">
+                <h3>Our Location</h3>
+                <p>Mahinthothaja Lab, Jaffna Hindu College</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <div class="info-item-content">
+                <h3>Email Us</h3>
+                <p
+                  onclick="location.href='mailto:jhcitclub28@gmail.com'"
+                  style="cursor: pointer"
+                >
+                  jhcitclub28@gmail.com
+                </p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="far fa-clock"></i>
+              <div class="info-item-content">
+                <h3>Meet Time</h3>
+                <p><strong>School Days :</strong> 10:40 AM - 10:50 AM</p>
+              </div>
+            </div>
+
+            <div class="social-links-container">
+              <h2>Follow Our <span class="gradient-text">Journey</span></h2>
+              <p>Stay updated</p>
+              <div class="social-links">
+                <a href="https://github.com/jhcitclub78" class="social-link">
+                  <i class="fab fa-github"></i>JHC IT Club
+                </a>
+
+                <a
+                  href="https://www.youtube.com/@JHCITClub"
+                  class="social-link"
+                >
+                  <i class="fab fa-youtube"></i>JHC IT Club
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <h2>Send Us a <span class="gradient-text">Message</span></h2>
+            <form
+              id="contactForm"
+              action="https://api.web3forms.com/submit"
+              method="POST"
+            >
+              <input
+                type="hidden"
+                name="access_key"
+                value="9396fcdb-a8b4-477c-8303-0ce01b22e5c2"
+              />
+              <!-- Set default subject for all messages -->
+              <input
+                type="hidden"
+                name="subject"
+                value="New Message from JHC IT Club Website"
+              />
+
+              <!-- Honeypot field for spam prevention -->
+              <input type="checkbox" name="botcheck" style="display: none" />
+
+              <div class="form-group">
+                <input type="text" id="name" name="name" required />
+                <label for="name">Your Name</label>
+                <div class="underline"></div>
+              </div>
+
+              <div class="form-group">
+                <input type="email" id="email" name="email" required />
+                <label for="email">Email Address</label>
+                <div class="underline"></div>
+              </div>
+
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="15"
+                  required
+                ></textarea>
+                <label for="message">Your Message</label>
+                <div class="underline"></div>
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                <span>Send Message</span>
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section scrani">
+      <div class="container">
+        <h2 class="section-title">
+          Find <span class="gradient-text">Us</span>
+        </h2>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d245.81521012160815!2d80.01248272300792!3d9.677336236788985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOcKwNDAnMzguMiJOIDgwwrAwMCc0NC45IkU!5e0!3m2!1sen!2stw!4v1747846111306!5m2!1sen!2stw"
+            width="100%"
+            height="500"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h3>JHC IT Club</h3>
+            <p>
+              The IT Club of Jaffna Hindu College is dedicated to digitalizing
+              the school and promoting technological advancement among students.
+            </p>
+            <div class="social-links-foot">
+              <a href="https://github.com/jhcitclub78"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="https://www.youtube.com/@JHCITClub"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about/">About Us</a></li>
+              <li><a href="../projects/">Projects</a></li>
+              <li><a href="./index.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Contact Info</h3>
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Mahinthothaja Lab, Jaffna
+                Hindu College
+              </li>
+              <li
+                onclick="location.href='mailto:jhcitclub28@gmail.com'"
+                style="cursor: pointer"
+              >
+                <i class="fas fa-envelope"></i> jhcitclub28@gmail.com
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 <strong>JHC IT Club.</strong> All Rights Reserved. |
+            Developed by
+            <a
+              href="https://abineethan.is-a.dev"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+              ><strong>Abineethan</strong></a
+            >.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
