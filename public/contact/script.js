@@ -10,11 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
       const message = document.getElementById("message");
       let isValid = true;
 
-      // Clear errors
       document.querySelectorAll(".error-message").forEach((el) => el.remove());
       document.querySelectorAll(".form-group").forEach((el) => el.classList.remove("error"));
 
-      // Validate fields
       if (name.value.trim() === "") {
         showError(name, "Name is required");
         isValid = false;
@@ -98,7 +96,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Initialize label positions for filled inputs
   initializeFormLabels();
 
   function initializeFormLabels() {
@@ -114,7 +111,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Animate form elements on load
   animateFormElements();
 
   function animateFormElements() {

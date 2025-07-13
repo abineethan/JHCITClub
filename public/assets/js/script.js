@@ -1,5 +1,17 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDio8InDYPJkEDkxU1-Tiens9uHVMKbjmQ",
+  authDomain: "jhcitclub.firebaseapp.com",
+  projectId: "jhcitclub",
+  storageBucket: "jhcitclub.firebasestorage.app",
+  messagingSenderId: "459061795818",
+  appId: "1:459061795818:web:639f18e758412b40c0f093",
+};
+
+const app = initializeApp(firebaseConfig);
+
 document.addEventListener("DOMContentLoaded", function () {
-  // ====== Mobile Menu Functionality ======
   const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
   const navbar = document.querySelector(".navbar");
 
@@ -11,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Close mobile menu when clicking on a link
   document.querySelectorAll(".navbar ul li a").forEach((link) => {
     link.addEventListener("click", function () {
       if (navbar) navbar.classList.remove("active");
@@ -22,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // ====== Smooth Scrolling ======
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
@@ -40,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // ====== Sticky Header ======
   window.addEventListener("scroll", function () {
     const header = document.querySelector(".header");
     if (header) {
@@ -54,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // ====== Scroll Animations ======
   function animateOnScroll() {
     const elements = document.querySelectorAll(
       ".feature-card, .project-card, .event-card, .scrani"
@@ -71,7 +79,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Initialize animation state
   document
     .querySelectorAll(".feature-card, .project-card, .event-card, .scrani")
     .forEach((element) => {
@@ -80,17 +87,14 @@ document.addEventListener("DOMContentLoaded", function () {
       element.style.transition = "all 0.6s ease";
     });
 
-  // Run animation on load and scroll
   window.addEventListener("load", animateOnScroll);
   window.addEventListener("scroll", animateOnScroll);
 
-  // ====== Projects Filter Functionality ======
   const filterButtons = document.querySelectorAll(".filter-btn");
   const mobileFilterSelect = document.getElementById("mobile-filter-select");
   const projectItems = document.querySelectorAll(".project-item");
 
   if (filterButtons.length > 0) {
-    // Desktop filter buttons
     filterButtons.forEach((button) => {
       button.addEventListener("click", () => {
         filterButtons.forEach((btn) => btn.classList.remove("active"));
@@ -101,7 +105,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-    // Mobile filter select
     if (mobileFilterSelect) {
       mobileFilterSelect.addEventListener("change", () => {
         const filterValue = mobileFilterSelect.value;
@@ -126,10 +129,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // ====== Dark Mode Toggle ======
   let darkModeToggle = document.querySelector(".dark-mode-toggle");
 
-  // If toggle button doesn't exist, create it
   if (!darkModeToggle) {
     darkModeToggle = document.createElement("button");
     darkModeToggle.className = "dark-mode-toggle";
@@ -137,7 +138,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(darkModeToggle);
   }
 
-  // Initialize theme based on saved preference or system preference
   function initializeTheme() {
     const savedTheme = localStorage.getItem("darkMode");
     const systemPrefersDark =
@@ -151,15 +151,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Add event listener
   darkModeToggle.addEventListener("click", toggleDarkMode);
 
-  // Watch for system preference changes
   window
     .matchMedia("(prefers-color-scheme: dark)")
     .addEventListener("change", (e) => {
       if (!localStorage.getItem("darkMode")) {
-        // Only follow system if no explicit choice
         if (e.matches) {
           enableDarkMode();
         } else {
@@ -186,7 +183,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     localStorage.setItem("darkMode", "enabled");
 
-    // Update header shadow if exists
     const header = document.querySelector(".header");
     if (header && window.scrollY > 100) {
       header.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.3)";
@@ -203,17 +199,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     localStorage.setItem("darkMode", "disabled");
 
-    // Update header shadow if exists
     const header = document.querySelector(".header");
     if (header && window.scrollY > 100) {
       header.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.1)";
     }
   }
 
-  // Initialize the theme when the page loads
   initializeTheme();
 
-  // ====== Preloader ======
   window.addEventListener("load", function () {
     const preloader = document.createElement("div");
     preloader.className = "preloader";

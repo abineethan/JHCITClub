@@ -429,107 +429,6 @@ img {
   margin-bottom: 5px;
 }
 
-/* Footer Styles */
-.footer {
-  background: var(--dark-color);
-  color: white;
-  padding: 60px 0 0;
-  position: relative;
-}
-
-.footer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 10px;
-  background: linear-gradient(
-    90deg,
-    var(--primary-color),
-    var(--secondary-color)
-  );
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
-  margin-bottom: 40px;
-}
-
-.footer-col h3 {
-  font-size: 1.3rem;
-  margin-bottom: 20px;
-  position: relative;
-  padding-bottom: 10px;
-  color: white;
-}
-
-.footer-col h3::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50px;
-  height: 2px;
-  background-color: var(--primary-color);
-}
-
-.footer-col p {
-  opacity: 0.8;
-  margin-bottom: 20px;
-  font-size: 0.95rem;
-}
-
-.social-links {
-  display: flex;
-  gap: 15px;
-}
-
-.social-links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  transition: var(--transition);
-}
-
-.social-links a:hover {
-  background-color: var(--primary-color);
-  transform: translateY(-3px);
-}
-
-.footer-col ul li {
-  margin-bottom: 10px;
-  font-size: 0.95rem;
-  opacity: 0.8;
-  transition: var(--transition);
-}
-
-.footer-col ul li:hover {
-  opacity: 1;
-  transform: translateX(5px);
-}
-
-.footer-col ul li i {
-  margin-right: 10px;
-  color: var(--primary-color);
-  width: 20px;
-  text-align: center;
-}
-
-.footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 20px 0;
-  text-align: center;
-  opacity: 0.8;
-  font-size: 0.9rem;
-}
-
 .latest-projects {
   padding: 100px 0;
   position: relative;
@@ -829,8 +728,7 @@ body.dark-mode {
 }
 
 .dark-mode .feature-card,
-.dark-mode .event-card,
-.dark-mode .footer {
+.dark-mode .event-card {
   background-color: #1e293b;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3),
     0 2px 4px -1px rgba(0, 0, 0, 0.2);
@@ -1021,8 +919,6 @@ body.dark-mode {
     margin-bottom: 15px;
   }
 
-  
-
   /* JHC Digital responsive */
   .app-header {
     flex-direction: column;
@@ -1123,10 +1019,6 @@ body.dark-mode {
     font-size: 1.8rem;
   }
 
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-
   .events, .events-p {
     padding: 50px 0;
   }
@@ -1160,7 +1052,6 @@ body.dark-mode {
   .event-details p {
     font-size: 0.8rem;
   }
-
 }
 
 @media (max-width: 480px) {

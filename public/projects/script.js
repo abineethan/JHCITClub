@@ -1,9 +1,7 @@
-  // Filter functionality
   const filterButtons = document.querySelectorAll('.filter-btn');
   const mobileFilterSelect = document.getElementById('mobile-filter-select');
   const projectItems = document.querySelectorAll('.project-item');
   
-  // Desktop filter buttons
   filterButtons.forEach(button => {
     button.addEventListener('click', () => {
       filterButtons.forEach(btn => btn.classList.remove('active'));
@@ -14,7 +12,7 @@
     });
   });
   
-  // Mobile filter select
+
   mobileFilterSelect.addEventListener('change', () => {
     const filterValue = mobileFilterSelect.value;
     filterProjects(filterValue);
@@ -31,7 +29,7 @@
     });
   }
   
-  // Header scroll effect
+
   window.addEventListener('scroll', function() {
     const header = document.querySelector('.header');
     header.classList.toggle('scrolled', window.scrollY > 50);

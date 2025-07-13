@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Countdown timer
   function updateCountdown() {
     const deadline = new Date('July 31, 2025 23:59:59').getTime();
     const now = new Date().getTime();
@@ -24,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
   updateCountdown();
   setInterval(updateCountdown, 1000);
 
-  // Smooth scrolling for navigation links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
@@ -38,13 +36,12 @@ document.addEventListener('DOMContentLoaded', function() {
           behavior: 'smooth'
         });
         
-        // Update URL without page jump
         history.pushState(null, null, targetId);
       }
     });
   });
 
-  // Intersection Observer for animations
+
   const animateElements = document.querySelectorAll('.animate');
   
   const observer = new IntersectionObserver((entries) => {
