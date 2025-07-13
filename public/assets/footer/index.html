@@ -1,281 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JHC IT Club</title>
-    <!-- Load Font Awesome FIRST -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <style>
-      /* Footer Styles - Isolated and Protected */
-      .footer {
-        background: #1e293b;
-        color: white;
-        padding: 60px 0 0;
-        position: relative;
-        font-family: "Poppins", sans-serif;
-        line-height: 1.6;
-      }
-
-      /* Reset all elements inside footer */
-      .footer * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: inherit;
-        line-height: inherit;
-      }
-
-      .footer::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 10px;
-        background: linear-gradient(90deg, #2563eb, #1e40af);
-      }
-
-      .footer a {
-        text-decoration: none;
-        color: inherit;
-      }
-
-      .footer ul {
-        list-style: none;
-      }
-
-      .footer .container {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      .footer .footer-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 40px;
-        margin-bottom: 40px;
-      }
-
-      .footer .footer-col h3 {
-        font-size: 1.3rem;
-        margin-bottom: 20px;
-        position: relative;
-        padding-bottom: 10px;
-        color: white;
-      }
-
-      .footer .footer-col h3::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 50px;
-        height: 2px;
-        background-color: #2563eb;
-      }
-
-      .footer .footer-col p {
-        opacity: 0.8;
-        margin-bottom: 20px;
-        font-size: 0.95rem;
-      }
-
-      /* Social Links with proper icon support */
-      .footer .social-links-foot {
-        display: flex;
-        gap: 15px;
-        margin-top: 20px;
-      }
-
-      .footer .social-links-foot a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 50%;
-        transition: all 0.3s ease;
-        color: white;
-        font-size: 1rem;
-      }
-
-      .footer .social-links-foot a:hover {
-        background-color: #2563eb;
-        transform: translateY(-3px);
-      }
-
-      /* Ensure Font Awesome icons display properly */
-      .footer .fab,
-      .footer .fas {
-        font-family: "Font Awesome 6 Brands";
-        font-weight: 400;
-      }
-
-      .footer .fas {
-        font-family: "Font Awesome 6 Free";
-        font-weight: 900;
-      }
-
-      .footer .footer-col ul li {
-        margin-bottom: 10px;
-        font-size: 0.95rem;
-        opacity: 0.8;
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-      }
-
-      .footer .footer-col ul li:hover {
-        opacity: 1;
-        transform: translateX(5px);
-      }
-
-      .footer .footer-col ul li i {
-        margin-right: 10px;
-        color: #2563eb;
-        width: 20px;
-        text-align: center;
-      }
-
-      .footer .footer-bottom {
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 20px 0;
-        text-align: center;
-        opacity: 0.8;
-        font-size: 0.9rem;
-      }
-
-      /* Responsive styles */
-      @media (max-width: 576px) {
-        .footer .footer-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .footer {
-          padding: 40px 0 0;
-        }
-      }
-
-      /* Dark Mode Footer Styles (directly extracted) */
-      body.dark-mode .footer {
-        background-color: #0f172a;
-        border-top: 1px solid #334155;
-      }
-
-      body.dark-mode .footer::before {
-        background: linear-gradient(
-          90deg,
-          var(--primary-color),
-          var(--secondary-color)
-        );
-      }
-
-      body.dark-mode .footer-col h3 {
-        color: white;
-      }
-
-      body.dark-mode .footer-col p {
-        opacity: 0.8;
-      }
-
-      body.dark-mode .footer-col ul li {
-        opacity: 0.8;
-      }
-
-      body.dark-mode .footer-col ul li:hover {
-        opacity: 1;
-      }
-
-      body.dark-mode .footer-col ul li i {
-        color: var(--primary-color);
-      }
-
-      body.dark-mode .footer-links a {
-        background-color: rgba(255, 255, 255, 0.1);
-      }
-
-      body.dark-mode .footer-links a:hover {
-        background-color: var(--primary-color);
-      }
-
-      body.dark-mode .footer-bottom {
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        opacity: 0.8;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Your Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-col">
-            <h3>JHC IT Club</h3>
-            <p>
-              The IT Club of Jaffna Hindu College is dedicated to digitalizing
-              the school and promoting technological advancement among students.
-            </p>
-            <div class="social-links-foot">
-              <a href="https://github.com/jhcitclub78" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="https://www.youtube.com/@JHCITClub" aria-label="YouTube">
-                <i class="fab fa-youtube"></i>
-              </a>
-              <a
-                href="https://www.instagram.com/jhcitclub"
-                aria-label="Instagram"
-              >
-                <i class="fab fa-instagram"></i>
-              </a>
-            </div>
-          </div>
-          <div class="footer-col">
-            <h3>Quick Links</h3>
-            <ul>
-              <li><a href="/public/">Home</a></li>
-              <li><a href="/public/about/">About Us</a></li>
-              <li><a href="/public/projects/">Projects</a></li>
-              <li><a href="/public/Contact/">Contact Us</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h3>Contact Info</h3>
-            <ul>
-              <li>
-                <i class="fas fa-map-marker-alt"></i> Mahinthothaja Lab, Jaffna
-                Hindu College
-              </li>
-              <li
-                onclick="location.href='mailto:jhcitclub28@gmail.com'"
-                style="cursor: pointer"
-              >
-                <i class="fas fa-envelope"></i> jhcitclub28@gmail.com
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>
-            &copy; 2025 <strong>JHC IT Club.</strong> All Rights Reserved. |
-            Developed by
-            <a
-              href="https://abineethan.is-a.dev"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <strong>Abineethan</strong>
-            </a>
-          </p>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>JHC IT Club</h3>
+        <p>
+          The IT Club of Jaffna Hindu College is dedicated to digitalizing
+          the school and promoting technological advancement among students.
+        </p>
+        <div class="social-links-foot">
+          <a href="https://github.com/jhcitclub78" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.youtube.com/@JHCITClub" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.instagram.com/jhcitclub" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
         </div>
       </div>
-    </footer>
-  </body>
-</html>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact Info</h3>
+        <ul>
+          <li>
+            <i class="fas fa-map-marker-alt"></i> Mahinthothaja Lab, Jaffna
+            Hindu College
+          </li>
+          <li onclick="location.href='mailto:jhcitclub28@gmail.com'" style="cursor: pointer">
+            <i class="fas fa-envelope"></i> jhcitclub28@gmail.com
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        &copy; <span id="current-year">2025</span> <strong>JHC IT Club.</strong> All Rights Reserved. |
+        Developed by
+        <a href="https://abineethan.is-a.dev" target="_blank" rel="noopener noreferrer">
+          <strong>Abineethan</strong>
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>

@@ -6,7 +6,7 @@ const firebaseConfig = {
   projectId: "jhcitclub",
   storageBucket: "jhcitclub.firebasestorage.app",
   messagingSenderId: "459061795818",
-  appId: "1:459061795818:web:639f18e758412b40c0f093",
+  appId: "1:459061795818:web:0482d1aafb516e7ac0f093",
 };
 
 const app = initializeApp(firebaseConfig);
