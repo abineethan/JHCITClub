@@ -1,16 +1,3 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyDio8InDYPJkEDkxU1-Tiens9uHVMKbjmQ",
-  authDomain: "jhcitclub.firebaseapp.com",
-  projectId: "jhcitclub",
-  storageBucket: "jhcitclub.firebasestorage.app",
-  messagingSenderId: "459061795818",
-  appId: "1:459061795818:web:0482d1aafb516e7ac0f093",
-};
-
-const app = initializeApp(firebaseConfig);
-
 document.addEventListener("DOMContentLoaded", function () {
   const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
   const navbar = document.querySelector(".navbar");
