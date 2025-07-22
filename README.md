@@ -6,5 +6,5 @@ Welcome to the **IT Club of Jaffna Hindu College** — dedicated to digitalizing
 
 ## 📚 About Us
 
-The **JHC IT Club** is a student-driven initiative focused on empowering students with modern digital skills.  
+The **JHC IT Club** is a student-driven initiative focused on empowering students with modern digital skills.   
 Our mission is to bridge the gap between students and technology through practical experience, teamwork, and innovation.
