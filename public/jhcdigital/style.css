@@ -444,7 +444,7 @@ img {
   box-shadow: var(--shadow-md);
   transition: var(--transition);
   cursor: pointer;
-  aspect-ratio: 9/16;
+  aspect-ratio: 7.5/16;
   object-fit: cover;
   border: 1px solid var(--border-color);
 }
