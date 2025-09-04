@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   function updateCountdown() {
-    const deadline = new Date('July 31, 2025 23:59:59').getTime();
+    const deadline = new Date('September 30, 2025 23:59:59').getTime();
     const now = new Date().getTime();
     const distance = deadline - now;
     
